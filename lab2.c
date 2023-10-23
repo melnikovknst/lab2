@@ -87,15 +87,15 @@ void swap(char *p, int num1, int num2) {
 
 // sort in ascending order
 void sort(char *p, int i) {
-    int count = 1;
+    int disordered = 1;
     
-    while (count) {
-        count = 0;
+    while (disordered) {
+        disordered = 0;
         
         for (int k = i + 1; k < (int)strlen(p) - 1; k++)
             if (p[k] > p[k + 1]) {
                 swap(p, k, k + 1);
-                count ++;
+                disordered ++;
             }
     }
 }
